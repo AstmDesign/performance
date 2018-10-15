@@ -1,0 +1,57 @@
+<div>
+
+  <label>
+    In this project I just created Users and Countries models to test the performance,
+    built using Ruby on Rails v 4.2.4 as framework and PostgreSQL DB
+  </label>
+
+  <label>
+    Start PostgreSQL server:
+  </label>
+
+  <pre>
+    <label>pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start</label>
+  </pre>
+
+  <label>
+    Database Creation:
+  </label>
+
+  <pre>
+    <label>rake db:create </label>
+    <label>rake db:migrate </label>
+    <label class="gray">Seed the Database to adding default Users and Countries.</label>
+    <label>rake db:seed</label>
+  </pre>
+
+  <label>
+    Start Rails Server:
+  </label>
+
+  <pre>
+    <label>rails s</label>
+  </pre>
+
+  <label>
+    Open On The Browser:
+  </label>
+
+  <pre>
+    <label>http://localhost:3000</label>
+  </pre>
+
+  <label>
+    Total Models Data:
+  </label>
+
+  <pre>
+    <label>Total countries: <span class="green"><%=number_with_delimiter(@total_countries, :delimiter => ',') %> </span>country</label>
+    <label class="gray">Query takes time: <span class="red"><%=@total_countries_timing%></span></label>
+  </pre>
+
+  <pre>
+    <label>Total users: <span class="green"><%=number_with_delimiter(@total_users, :delimiter => ',') %> </span>user</label>
+    <label class="gray">Takes time: <span class="red"><%=@total_users_timing%></span></label>
+  </pre>
+
+</div>
