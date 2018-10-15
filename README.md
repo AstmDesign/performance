@@ -9,13 +9,11 @@ First you need to make sure that your machine has Ruby & Postgres database then 
 
 ## Start MysQL server ##
 ```
-#!ruby
 pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
 ```
 
 ## Database creation ##
 ```
-#!ruby
 rake db:create
 rake db:migrate
 # Seed the Database to adding default Users and Countries.
@@ -24,7 +22,6 @@ rake db:seed
 
 ## Start rails server ##
 ```
-#!ruby
 rails s
 ```
 
