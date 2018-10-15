@@ -1,28 +1,32 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In this project I just created Users and Countries models to test the performance,
+built using Ruby on Rails v 4.2.4 as framework and PostgreSQL DB
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Installing #
+First you need to make sure that your machine has Ruby & Postgres database then you need to run the below commands
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+## Start MysQL server ##
+```
+#!ruby
+pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start
+```
+
+## Database creation ##
+```
+#!ruby
+rake db:create
+rake db:migrate
+# Seed the Database to adding default Users and Countries.
+rake db:seed
+```
+
+## Start rails server ##
+```
+#!ruby
+rails s
+```
+
+## Open on the browser ##
+http://localhost:3000
